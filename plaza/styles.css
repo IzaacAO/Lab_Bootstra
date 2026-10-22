@@ -17,3 +17,23 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+.navbar-plaza {
+  background-color: #5c3d2e;
+}
+
+.hero-plaza {
+  background-color: #8b5a3c;
+}
+
+.footer-plaza {
+  background-color: #3e2a1f;
+}
+
+.btn-primary {
+  --bs-btn-bg: #8b5a3c;
+  --bs-btn-border-color: #8b5a3c;
+  --bs-btn-hover-bg: #6f452b;
+  --bs-btn-hover-border-color: #6f452b;
+  --bs-btn-active-bg: #5c3720;
+  --bs-btn-active-border-color: #5c3720;
+}

@@ -38,3 +38,124 @@ Ejercicio 08 · La letra (en las TRES páginas)
   - El <link> de Google Fonts con tu fuente, en el <head>.
 ============================================================
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de la Plaza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-plaza" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-basket"></i> Sabores de la Plaza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero-plaza text-white text-center py-5">
+    <div class="container py-lg-5">
+      <p class="text-uppercase small fw-semibold mb-2">Los mejores productos para tu hogar</p>
+      <h1 class="display-5 fw-bold">Comer bien también es una inversión</h1>
+      <p class="lead mb-4">Usamos los mejores ingredientes para darte lo mejor.</p>
+      <a href="puestos.html" class="btn btn-light btn-lg m-1">Ver puestos</a>
+      <a href="contacto.html" class="btn btn-outline-light btn-lg m-1">Contáctanos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container py-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-3 text-center">
+          <i class="bi bi-apple fs-1 text-success"></i>
+          <h2 class="h4">Fresco</h2>
+          <p>Frutas y verduras frescas.</p>
+        </div>
+        <div class="col-12 col-lg-3 text-center">
+          <i class="bi bi-geo-alt fs-1 text-success"></i>
+          <h2 class="h4">Local</h2>
+          <p>Vendedores locales.</p>
+        </div>
+        <div class="col-12 col-lg-3 text-center">
+          <i class="bi bi-hand-thumbs-up fs-1 text-success"></i>
+          <h2 class="h4">Hecho a mano</h2>
+          <p>Pan, almuerzos y café preparados con cariño para ustedes.</p>
+        </div>
+        <div class="col-12 col-lg-3 text-center">
+          <i class="bi bi-cup-straw fs-1 text-success"></i>
+          <h2 class="h4">Natural</h2>
+          <p>Jugos naturales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container pb-5">
+      <h2 class="text-center mb-4">Conoce Nuestra Plaza</h2>
+      <div id="carruselPlaza" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselPlaza" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto1"></button>
+          <button type="button" data-bs-target="#carruselPlaza" data-bs-slide-to="1" aria-label="Foto2"></button>
+          <button type="button" data-bs-target="#carruselPlaza" data-bs-slide-to="2" aria-label="Foto3"></button>
+        </div>
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="img/frutas.svg" class="d-block w-100" alt="frutas">
+          </div>
+          <div class="carousel-item">
+            <img src="img/pan.svg" class="d-block w-100" alt="pan">
+          </div>
+          <div class="carousel-item">
+            <img src="img/cafe.svg" class="d-block w-100" alt=" taza de café">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPlaza" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselPlaza" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <h2 class="h5"><i class="bi bi-basket"></i> Sabores de la Plaza</h2>
+          <p class="mb-0">Colectivo de puestos de la plaza de mercado.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="mb-1"><i class="bi bi-geo-alt"></i> Plaza de mercado, Carera 99 # 11-666</p>
+          <p class="mb-0"><i class="bi bi-clock"></i> Lunes a domingo, 6:00 a. m. a 4:00 p. m.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="mb-1"><i class="bi bi-telephone"></i> 20000780000</p>
+          <p class="mb-0"><i class="bi bi-envelope"></i>saboresdelaplaza.co</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

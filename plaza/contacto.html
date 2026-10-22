@@ -27,3 +27,192 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y pedidos · Sabores de la Plaza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-plaza" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-basket"></i> Sabores de la Plaza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+
+    <section class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h1 class="mb-2">Contacto y pedidos</h1>
+        <p class="text-secondary mb-4">Escríbenos y te respondemos lo más pronto posible.</p>
+
+        <form action="#" method="post">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@correo.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="puesto" class="form-label">Puesto</label>
+            <select class="form-select" id="puesto" name="puesto" required>
+              <option value="" selected disabled>Elige un puesto</option>
+              <option value="frutas">Canasta de frutas</option>
+              <option value="panaderia">Horno de la plaza</option>
+              <option value="almuerzos">Sazón casera</option>
+              <option value="jugos">Jugos de la casa</option>
+              <option value="cafe">Rincón del café</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+              placeholder="Cuéntanos qué necesitas"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <button type="button" class="btn btn-outline-secondary ms-2" data-bs-toggle="modal"
+            data-bs-target="#modalHorario">
+            Ver horario </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="row justify-content-center mt-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h2 class="h4 mb-3">Preguntas frecuentes</h2>
+
+        <div class="accordion" id="preguntas">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pregunta1"
+                aria-expanded="true" aria-controls="pregunta1">
+                ¿Hacen domicilios?
+              </button>
+            </h3>
+            <div id="pregunta1" class="accordion-collapse collapse show" data-bs-parent="#preguntas">
+              <div class="accordion-body">
+                Sí, hacemos domicilios en los barrios cercanos a la plaza. Escríbenos con tu dirección y te confirmamos
+                el costo.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#pregunta2" aria-expanded="false" aria-controls="pregunta2">
+                ¿Cómo puedo pagar?</button>
+            </h3>
+            <div id="pregunta2" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+              <div class="accordion-body">
+                Aceptamos efectivo y transferencias. Cada puesto te indica sus medios de pago al hacer el pedido.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#pregunta3" aria-expanded="false" aria-controls="pregunta3">
+                ¿Puedo reservar el almuerzo del día?
+              </button>
+            </h3>
+            <div id="pregunta3" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+              <div class="accordion-body">
+                Sí. Elige "Sazón casera" en el formulario y escribe cuántos almuerzos necesitas. Los cupos son
+                limitados.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#pregunta4" aria-expanded="false" aria-controls="pregunta4">
+                ¿Hacen pedidos para eventos?
+              </button>
+            </h3>
+            <div id="pregunta4" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+              <div class="accordion-body">
+                Claro. Cuéntanos la fecha y el número de personas en el mensaje y te armamos una propuesta.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal fade" id="modalHorario" tabindex="-1" aria-labelledby="tituloHorario" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloHorario">Horario de atención</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-1"><i class="bi bi-clock"></i> Lunes a sábado: 6:00 a. m. a 4:00 p. m.</p>
+          <p class="mb-1"><i class="bi bi-clock"></i> Domingos y festivos: 6:00 a. m. a 12:00 m.</p>
+          <p class="mb-0"><i class="bi bi-geo-alt"></i> Plaza de mercado, Calle 00 # 00-00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-4" data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <h2 class="h5"><i class="bi bi-basket"></i> Sabores de la Plaza</h2>
+          <p class="mb-0">Colectivo de pustos de la plaza de mercado</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="mb-1"><i class="bi bi-geo-alt"></i> Plaza de mercado, Calle 00 # 00-00</p>
+          <p class="mb-0"><i class="bi bi-clock"></i> Lunes a sábado, 6:00 a. m. a 4:00 p. m.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="mb-1"><i class="bi bi-telephone"></i> 300 000 0000</p>
+          <p class="mb-0"><i class="bi bi-envelope"></i> hola@saboresdelaplaza.co</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
